@@ -18,21 +18,22 @@ The codebase is written in JavaScript and prop-types,  could done in typescript.
 - Assume the main details are (id, name, status, shift, Area, Date).
 
 ## Filter reservations:
-Filter by date by selecting from the calendar and matching it with businessDate.
-Filter by Status Can Select Multiple.
-Filter by Area Can Select Multiple.
-Filter by Shift can select one.
-Have the ability to Reset the filter.
+- Filter by date by selecting from the calendar and matching it with businessDate.
+- Filter by Status Can Select Multiple.
+- Filter by Area Can Select Multiple.
+- Filter by Shift can select one.
+- Have the ability to Reset the filter.
+- Reset sort if filter changed.
 
 ## Sort reservations:
-Sort by and column (id, name, status, shift, Area, Date) just click on it for ascending and descending.
-The user can sort by guest number and guest name - assumed guest number is customer-id 
+- Sort by any column (id, name, status, shift, Area, Date) just by clicking on it for ascending and descending.
+- The user can sort by guest number and guest name - assumed guest number is customer-id 
 
 ## Search by name and surname
 
-Search by name Resets Filter 
-Can Filter search Results 
-Search by name is searching by searchQuery in first and last name, not exact match 
+- Search by name Resets Filter 
+- Can Filter search Results 
+- Search by name is searching by searchQuery in first and last name, not exact match 
 
 
             reservation.customer.firstName
