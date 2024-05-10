@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const MultiSelect = ({
   options,
@@ -28,3 +29,13 @@ export const MultiSelect = ({
     </div>
   );
 };
+
+MultiSelect.propTypes = {
+  options: PropTypes.arrayOf(PropTypes.string).isRequired,
+  label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  filter: PropTypes.arrayOf(PropTypes.string).isRequired,
+  handleFilterChange: PropTypes.func.isRequired,
+};
+
+export default MultiSelect;

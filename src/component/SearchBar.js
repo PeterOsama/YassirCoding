@@ -1,6 +1,8 @@
 import React from 'react';
 import { IoIosSearch } from 'react-icons/io';
-export const SearchBar2 = ({ searchQuery, handleSearchChange }) => {
+import PropTypes from 'prop-types';
+
+export const SearchBar = ({ searchQuery, handleSearchChange }) => {
   return (
     <div className="relative mb-4">
       <input
@@ -16,3 +18,10 @@ export const SearchBar2 = ({ searchQuery, handleSearchChange }) => {
     </div>
   );
 };
+
+SearchBar.propTypes = {
+  searchQuery: PropTypes.string.isRequired,
+  handleSearchChange: PropTypes.func.isRequired,
+};
+
+export default SearchBar;

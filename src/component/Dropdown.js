@@ -1,12 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export const Dropdown = ({
-  options,
-  label,
-  name,
-  filter,
-  handleFilterChange,
-}) => {
+const Dropdown = ({ options, label, name, filter, handleFilterChange }) => {
   return (
     <div>
       <label htmlFor={`${name} Filter`} className="block font-semibold">
@@ -28,3 +23,18 @@ export const Dropdown = ({
     </div>
   );
 };
+
+Dropdown.propTypes = {
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+  label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  filter: PropTypes.string.isRequired,
+  handleFilterChange: PropTypes.func.isRequired,
+};
+
+export default Dropdown;
